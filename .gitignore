@@ -1,4 +1,5 @@
 node_modules/
+testTweet.js
 
 # Editors
 .vscode/

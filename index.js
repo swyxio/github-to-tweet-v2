@@ -12,10 +12,15 @@ async function run() {
   try {
     core.info(JSON.stringify(github.context, null, 2));
     core.debug((new Date()).toTimeString()); // debug is only output if you set the secret `ACTIONS_RUNNER_DEBUG` to true
-    const client = new TwitterApi(core.getInput('TWITTER_BEARER_TOKEN')); // have it in github secrets
-    const rwClient = client.readWrite;
+    
+    const client = new TwitterApi({
+      appKey: core.getInput('TWITTER_API_KEY'),
+      appSecret: core.getInput('TWITTER_API_KEY_SECRET'),
+      accessToken: core.getInput('TWITTER_ACCESS_TOKEN'),
+      accessSecret: core.getInput('TWITTER_ACCESS_SECRET'),
+    });
     // https://github.com/PLhery/node-twitter-api-v2/blob/master/doc/examples.md
-    await rwClient.v1.tweet(`${repoName} update:
+    await client.v2.tweet(`${repoName} update:
     
     ${message}`);
     core.info((new Date()).toTimeString());
