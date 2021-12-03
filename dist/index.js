@@ -13947,25 +13947,31 @@ const { TwitterApi } = __nccwpck_require__(9360);
 // const wait = require('./wait');
 
 const repoName = github.context.payload.repository.full_name;
-const { message } = github.context.payload.commits[0];
+const { message, url } = github.context.payload.commits[0];
 
 
 // most @actions toolkit packages have async methods
 async function run() {
   try {
-    core.info(JSON.stringify(github.context, null, 2));
-    core.debug((new Date()).toTimeString()); // debug is only output if you set the secret `ACTIONS_RUNNER_DEBUG` to true
-    
-    const client = new TwitterApi({
+    const auth = {
       appKey: core.getInput('TWITTER_API_KEY'),
       appSecret: core.getInput('TWITTER_API_KEY_SECRET'),
       accessToken: core.getInput('TWITTER_ACCESS_TOKEN'),
       accessSecret: core.getInput('TWITTER_ACCESS_SECRET'),
-    });
-    // https://github.com/PLhery/node-twitter-api-v2/blob/master/doc/examples.md
-    await client.v2.tweet(`${repoName} update:
+    }
+    core.info(JSON.stringify(auth, null, 2));
+    core.debug((new Date()).toTimeString()); // debug is only output if you set the secret `ACTIONS_RUNNER_DEBUG` to true
     
-    ${message}`);
+    const client = new TwitterApi(auth);
+    // https://github.com/PLhery/node-twitter-api-v2/blob/master/doc/examples.md
+    let message = 'hello from gh action'
+    const realmsg = `${repoName} update:
+    
+    ${message}
+    
+    https://github.com/${url}`
+    core.info(realmsg);
+    await client.v2.tweet(message);
     core.info((new Date()).toTimeString());
     // const ms = core.getInput('milliseconds');
     // core.info(`Waiting ${ms} milliseconds ...`);

@@ -1,0 +1,88 @@
+{
+  "payload": {
+    "after": "550ffd46196ba718790c84a71c1c922ad5e2422b",
+    "base_ref": null,
+    "before": "446e8fa5fe4f4946b2a851edc541829df477b8f2",
+    "commits": [
+      {
+        "author": {
+          "email": "shawnthe1@gmail.com",
+          "name": "sw-yx",
+          "username": "sw-yx"
+        },
+        "committer": {
+          "email": "shawnthe1@gmail.com",
+          "name": "sw-yx",
+          "username": "sw-yx"
+        },
+        "distinct": true,
+        "id": "550ffd46196ba718790c84a71c1c922ad5e2422b",
+        "message": "main.yml",
+        "timestamp": "2021-12-03T01:46:30-08:00",
+        "tree_id": "0937ef93627857d3c316ee5ab0ed7dbca178ca95",
+        "url": "sw-yx/brain/commit/550ffd46196ba718790c84a71c1c922ad5e2422b"
+      }
+    ],
+    "compare": "446e8fa5fe4f...550ffd46196b (compare)",
+    "created": false,
+    "deleted": false,
+    "forced": false,
+    "head_commit": {
+      "author": {
+        "email": "shawnthe1@gmail.com",
+        "name": "sw-yx",
+        "username": "sw-yx"
+      },
+      "committer": {
+        "email": "shawnthe1@gmail.com",
+        "name": "sw-yx",
+        "username": "sw-yx"
+      },
+      "distinct": true,
+      "id": "550ffd46196ba718790c84a71c1c922ad5e2422b",
+      "message": "main.yml",
+      "timestamp": "2021-12-03T01:46:30-08:00",
+      "tags_url": "api.github.com/repos/sw-yx/brain/tags",
+      "teams_url": "api.github.com/repos/sw-yx/brain/teams",
+      "topics": [],
+      "trees_url": "https://api.github.com/repos/sw-yx/brain/git/trees{/sha}",
+      "updated_at": "2021-12-03T09:09:17Z",
+      "url": "sw-yx/brain",
+      "visibility": "public",
+      "watchers": 1024,
+      "watchers_count": 1024
+    },
+    "sender": {
+      "avatar_url": "avatars.githubusercontent.com/u/6764957?v=4",
+      "events_url": "https://api.github.com/users/sw-yx/events{/privacy}",
+      "followers_url": "api.github.com/users/sw-yx/followers",
+      "following_url": "https://api.github.com/users/sw-yx/following{/other_user}",
+      "gists_url": "https://api.github.com/users/sw-yx/gists{/gist_id}",
+      "gravatar_id": "",
+      "html_url": "@sw-yx",
+      "id": 6764957,
+      "login": "sw-yx",
+      "node_id": "MDQ6VXNlcjY3NjQ5NTc=",
+      "organizations_url": "api.github.com/users/sw-yx/orgs",
+      "received_events_url": "api.github.com/users/sw-yx/received_events",
+      "repos_url": "api.github.com/users/sw-yx/repos",
+      "site_admin": false,
+      "starred_url": "https://api.github.com/users/sw-yx/starred{/owner}{/repo}",
+      "subscriptions_url": "api.github.com/users/sw-yx/subscriptions",
+      "type": "User",
+      "url": "api.github.com/users/sw-yx"
+    }
+  },
+  "eventName": "push",
+  "sha": "550ffd46196ba718790c84a71c1c922ad5e2422b",
+  "ref": "refs/heads/master",
+  "workflow": ".github/workflows/main.yml",
+  "action": "__sw-yx_github-to-tweet-v2",
+  "actor": "sw-yx",
+  "job": "post_tweet_job",
+  "runNumber": 3,
+  "runId": 1534656609,
+  "apiUrl": "api.github.com",
+  "serverUrl": "github.com",
+  "graphqlUrl": "api.github.com/graphql"
+}

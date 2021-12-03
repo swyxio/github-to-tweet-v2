@@ -1,4 +1,7 @@
-# swyx
+# Github commit to tweet action using twitter api v2
+
+
+## How to use
 
 ```yaml
 # .github/workflows/main.yml
