@@ -2,9 +2,18 @@ name: 'GitHub Tweet Action using Twitter API v2'
 description: 'Send tweet on commit using Twitter API v2'
 author: 'swyx'
 inputs:
-  TWITTER_BEARER_TOKEN:
+  TWITTER_API_KEY:
     description: >
-      Twitter API v2 Bearer Token
+      Twitter API v2 API key
+  TWITTER_API_KEY_SECRET:
+    description: >
+      Twitter API v2 API key secret
+  TWITTER_ACCESS_TOKEN:
+    description: >
+      Twitter API v2 user related access token
+  TWITTER_ACCESS_SECRET:
+    description: >
+      Twitter API v2 user related access secret
 runs:
   using: 'node12'
   main: 'dist/index.js'
