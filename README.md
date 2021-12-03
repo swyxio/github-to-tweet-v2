@@ -18,6 +18,18 @@ jobs:
         TWITTER_BEARER_TOKEN: ${{ secrets.TWITTER_BEARER_TOKEN }}
 ```
 
+## publishing instructions
+
+```bash
+npm run prepare
+```
+
+## used
+
+- https://hibbard.eu/tweet-javascript-github-action/
+
+
+
 # Create a JavaScript Action
 
 <p align="center">
