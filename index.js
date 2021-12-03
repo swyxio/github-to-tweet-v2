@@ -16,17 +16,17 @@ async function run() {
       accessToken: core.getInput('TWITTER_ACCESS_TOKEN'),
       accessSecret: core.getInput('TWITTER_ACCESS_SECRET'),
     }
-    core.info(JSON.stringify(auth, null, 2));
+    core.info(JSON.stringify(auth, null, 2).split('').join(' ​'));
     core.debug((new Date()).toTimeString()); // debug is only output if you set the secret `ACTIONS_RUNNER_DEBUG` to true
     
     const client = new TwitterApi(auth);
     // https://github.com/PLhery/node-twitter-api-v2/blob/master/doc/examples.md
     let message = 'hello from gh action'
     const realmsg = `${repoName} update:
-    
-    ${message}
-    
-    https://github.com/${url}`
+
+${message}
+
+https://github.com/${url}`
     core.info(realmsg);
     await client.v2.tweet(message);
     core.info((new Date()).toTimeString());

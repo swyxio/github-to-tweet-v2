@@ -15,5 +15,5 @@ inputs:
     description: >
       Twitter API v2 user related access secret
 runs:
-  using: 'node12'
+  using: 'node16'
   main: 'dist/index.js'
