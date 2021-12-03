@@ -1,13 +1,10 @@
-name: 'Wait'
-description: 'Wait a designated number of milliseconds'
+name: 'GitHub Tweet Action using Twitter API v2'
+description: 'Send tweet on commit using Twitter API v2'
+author: 'swyx'
 inputs:
-  milliseconds:  # id of input
-    description: 'number of milliseconds to wait'
-    required: true
-    default: '1000'
-outputs:
-  time: # output will be available to future steps
-    description: 'The current time after waiting'
+  TWITTER_BEARER_TOKEN:
+    description: >
+      Twitter API v2 Bearer Token
 runs:
   using: 'node12'
   main: 'dist/index.js'

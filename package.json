@@ -25,7 +25,8 @@
   },
   "homepage": "https://github.com/actions/javascript-action#readme",
   "dependencies": {
-    "@actions/core": "^1.2.5"
+    "@actions/core": "^1.2.5",
+    "twitter-api-v2": "^1.7.0"
   },
   "devDependencies": {
     "@vercel/ncc": "^0.31.1",

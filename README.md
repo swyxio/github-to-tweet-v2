@@ -1,3 +1,23 @@
+# swyx
+
+```yaml
+# .github/workflows/main.yml
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  post_tweet_job:
+    runs-on: ubuntu-latest
+    name: Post tweet to Twitter
+    steps:
+    - name: Tweets link to every commit
+      uses: sw-yx/github-to-tweet@main
+      with:
+        TWITTER_BEARER_TOKEN: ${{ secrets.TWITTER_BEARER_TOKEN }}
+```
+
 # Create a JavaScript Action
 
 <p align="center">
